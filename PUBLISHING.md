@@ -42,7 +42,30 @@ gh release create v0.2.0 ./dsh-deepseek-cost-0.2.0.tgz \
 - [ ] 安装路径实测：粘贴 `github:skyrocks/dsh-deepseek-cost` 后完全退出重启
 - [ ] Release 附件与 `package.json` 版本一致
 
-## 5. 数据口径（避免再次误解）
+## 5. 本机发布记录（2026-10-30）
+
+- 仓库已创建并推送：<https://github.com/skyrocks/dsh-deepseek-cost>，tag `v0.2.0`。
+- 本机 SSH(22) 与 HTTPS(443) 均不可达 github.com，只有 `api.github.com` 可用，
+  因此首次发布走 GitHub Git Data API（blob → tree → commit → ref）完成。
+- `.github/workflows/ci.yml` **未推送**：当前 gh token 的 scope 是
+  `gist, read:org, repo`，缺 `workflow`。补推步骤：
+
+  ```sh
+  gh auth refresh -h github.com -s workflow
+  gh api -X PUT /repos/skyrocks/dsh-deepseek-cost/contents/.github/workflows/ci.yml \
+    -f message="ci: add workflow" \
+    -f content="$(base64 -i .github/workflows/ci.yml)"
+  ```
+
+- 网络恢复后把本地历史对齐到远端：
+
+  ```sh
+  git fetch origin
+  git reset --hard origin/main   # 本地提交内容与远端一致，只差 ci.yml
+  git commit -am "ci: add workflow" && git push -u origin main
+  ```
+
+## 6. 数据口径（避免再次误解）
 
 - 余额 / 今日 / 本周 / 本月 / 累计：**官网同源接口**，不做任何本地补差。
 - 本轮：本地按官方价目表估算（官网无此粒度）。
