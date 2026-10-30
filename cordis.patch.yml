@@ -1,0 +1,11 @@
+# dsh-deepseek-cost 插件行：作为 bundle patch 自动注入 profile 组合。
+# 安装后由 `dsh plugin add` 的 reconcile 步骤登记为 profile layer，无需手改用户层。
+# 需要调整时，在 profile 的 cordis.patch.yml 里按 id 覆盖 config：
+#   - id: deepseek-cost
+#     config:
+#       cacheMs: 60000        # 官网数据缓存
+#       prices:               # 仅影响「本轮」的本地估算
+#         deepseek-flash: { input: 2, cacheRead: 0.04, output: 8 }
+- insert:
+    - id: deepseek-cost
+      name: dsh-deepseek-cost

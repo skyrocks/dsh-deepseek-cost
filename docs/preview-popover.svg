@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="380" height="340" viewBox="0 0 380 340" role="img" aria-label="悬浮详情面板示意图">
+  <title>悬浮详情面板</title>
+  <defs>
+    <filter id="panel-shadow" x="-10%" y="-10%" width="120%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <rect width="380" height="340" fill="#ffffff"/>
+  <rect x="20" y="14" width="340" height="306" rx="12" fill="#ffffff" stroke="#e6e8eb" filter="url(#panel-shadow)"/>
+
+  <text x="36" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="12.5" font-weight="600" fill="#1f2329">DeepSeek 余额与花费</text>
+  <text x="344" y="44" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="#8a8f98">更新 17:20</text>
+
+  <!-- 余额 -->
+  <text x="36" y="82" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10.5" fill="#6b7280">余额</text>
+  <text x="344" y="82" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="12.5" font-weight="600" fill="#e5484d">-¥0.49</text>
+  <text x="36" y="100" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="#8a8f98">充值 -¥0.49 · 赠送 ¥0</text>
+
+  <!-- 本轮 -->
+  <text x="36" y="132" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10.5" fill="#6b7280">本轮</text>
+  <text x="286" y="132" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="#8a8f98">12.3k in · 0.8k out</text>
+  <text x="344" y="132" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10.5" fill="#1f2329">¥0.02</text>
+
+  <!-- 今日 -->
+  <text x="36" y="160" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10.5" fill="#6b7280">今日</text>
+  <text x="286" y="160" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="#8a8f98">deepseek-flash</text>
+  <text x="344" y="160" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10.5" fill="#1f2329">¥0</text>
+
+  <!-- 本周 -->
+  <text x="36" y="188" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10.5" fill="#6b7280">本周</text>
+  <text x="344" y="188" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10.5" fill="#1f2329">¥0</text>
+
+  <!-- 本月 -->
+  <text x="36" y="216" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10.5" fill="#6b7280">本月</text>
+  <text x="286" y="216" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="#8a8f98">deepseek-flash · deepseek-v4-pro</text>
+  <text x="344" y="216" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10.5" fill="#1f2329">¥18.77</text>
+
+  <!-- 累计 -->
+  <text x="36" y="244" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10.5" fill="#6b7280">累计</text>
+  <text x="344" y="244" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10.5" fill="#1f2329">¥129.65</text>
+  <text x="36" y="262" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="#8a8f98">官网账号累计（含其它客户端）</text>
+
+  <!-- footer -->
+  <line x1="36" y1="280" x2="344" y2="280" stroke="#eceef1" stroke-width="1"/>
+  <text x="36" y="298" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="9.5" fill="#8a8f98">数据来源：余额 / 今日 / 本周 / 本月 / 累计 直接读官网账号；</text>
+  <text x="36" y="313" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="9.5" fill="#8a8f98">本轮由本地按官方价目表估算（官网不提供该粒度）。</text>
+</svg>

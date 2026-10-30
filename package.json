@@ -1,0 +1,77 @@
+{
+  "name": "dsh-deepseek-cost",
+  "version": "0.2.0",
+  "description": "DeepSeek Harness plugin: 输入框下方常驻显示官网账号余额，以及本轮 / 今日 / 本周 / 本月 / 累计花费",
+  "license": "MIT",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./typert": "./typert.host.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "official.js",
+    "balance.js",
+    "pricing.js",
+    "ledger.js",
+    "client.js",
+    "typert.host.js",
+    "cordis.patch.yml",
+    "README.md",
+    "README.en.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "docs",
+    "test"
+  ],
+  "engines": {
+    "node": ">=18",
+    "dsh": ">=0.2.1-rc.2 <0.3.0"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-api-gateway",
+        "@deepseek-ai/dsh-api-remotes"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "@deepseek-ai/cordis": "~4.0.5",
+    "@deepseek-ai/schemastery": "~3.18.5",
+    "@deepseek-ai/dsh-typert-protocol": "0.2.1-rc.2",
+    "@deepseek-ai/dsh-credentials": "0.2.1-rc.2"
+  },
+  "author": "dsh-deepseek-cost contributors",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "client-plugin",
+    "deepseek",
+    "balance",
+    "usage",
+    "cost",
+    "quota"
+  ],
+  "scripts": {
+    "test": "node test/smoke.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skyrocks/dsh-deepseek-cost.git"
+  },
+  "homepage": "https://github.com/skyrocks/dsh-deepseek-cost#readme",
+  "bugs": {
+    "url": "https://github.com/skyrocks/dsh-deepseek-cost/issues"
+  }
+}
