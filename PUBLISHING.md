@@ -27,8 +27,9 @@ git push origin v0.2.0
 ## 3. Release
 
 ```sh
-pnpm pack                      # 生成 dsh-deepseek-cost-0.2.0.tgz
-gh release create v0.2.0 ./dsh-deepseek-cost-0.2.0.tgz \
+pnpm pack                      # 生成 skyrocks-dsh-deepseek-cost-0.2.1.tgz
+npm publish --access public    # 发布到 npm（名字带 scope）
+gh release create v0.2.1 ./skyrocks-dsh-deepseek-cost-0.2.1.tgz \
   --title "v0.2.0" --generate-notes
 ```
 
@@ -44,7 +45,7 @@ gh release create v0.2.0 ./dsh-deepseek-cost-0.2.0.tgz \
 
 ## 5. 本机发布记录（2026-10-30）
 
-- 仓库已创建并推送：<https://github.com/skyrocks/dsh-deepseek-cost>，tag `v0.2.0`。
+- 仓库已创建并推送：<https://github.com/skyrocks/dsh-deepseek-cost>，tag `v0.2.1`。
 - 本机 SSH(22) 与 HTTPS(443) 均不可达 github.com，只有 `api.github.com` 可用，
   因此首次发布走 GitHub Git Data API（blob → tree → commit → ref）完成。
 - `.github/workflows/ci.yml` **未推送**：当前 gh token 的 scope 是

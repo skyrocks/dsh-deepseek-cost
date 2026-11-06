@@ -1,6 +1,6 @@
 {
-  "name": "dsh-deepseek-cost",
-  "version": "0.2.0",
+  "name": "@skyrocks/dsh-deepseek-cost",
+  "version": "0.2.1",
   "description": "DeepSeek Harness plugin: 输入框下方常驻显示官网账号余额，以及本轮 / 今日 / 本周 / 本月 / 累计花费",
   "license": "MIT",
   "type": "module",
@@ -51,7 +51,7 @@
     "@deepseek-ai/dsh-typert-protocol": "0.2.1-rc.2",
     "@deepseek-ai/dsh-credentials": "0.2.1-rc.2"
   },
-  "author": "dsh-deepseek-cost contributors",
+  "author": "skyrocks (https://github.com/skyrocks)",
   "keywords": [
     "deepseek-harness",
     "dsh",
@@ -65,6 +65,9 @@
   ],
   "scripts": {
     "test": "node test/smoke.mjs"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "repository": {
     "type": "git",

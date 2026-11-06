@@ -1,5 +1,9 @@
 # dsh-deepseek-cost
 
+[![npm](https://img.shields.io/npm/v/@skyrocks/dsh-deepseek-cost?label=npm)](https://www.npmjs.com/package/@skyrocks/dsh-deepseek-cost)
+![license](https://img.shields.io/badge/license-MIT-blue.svg)
+![dsh](https://img.shields.io/badge/DSH-0.2.1--rc.2%20line-4d6bfe)
+
 在 **DeepSeek Harness** 的对话输入框下方，常驻显示 **DeepSeek 账号余额** 与
 **本轮 / 今日 / 本周 / 本月 / 累计** 花费，悬浮看明细，点击立即刷新。
 
@@ -68,12 +72,27 @@ DS  -¥0.49 │ 轮 ¥0.02 │ 日 ¥0 │ 周 ¥0 │ 月 ¥18.77 │ 总 ¥129
 
 ### 桌面端（推荐）
 
-1. 设置 →「插件」→「添加插件」，粘贴本地目录绝对路径：
-   ```
-   /Users/you/dsh-deepseek-cost
-   ```
-2. 完全退出 DSH 再打开（Host 插件只在启动时加载）。
-3. 选一个官方 DeepSeek 模型，输入框下方出现 `DS 余额 … ｜ 轮 … ｜ 日 …`。
+设置 →「插件」→「添加插件」，粘贴下面任意一种来源：
+
+```
+@skyrocks/dsh-deepseek-cost          # npm 包
+github:skyrocks/dsh-deepseek-cost    # GitHub 默认分支
+```
+
+然后 **完全退出 DSH 再打开**（Host 插件只在启动时加载），选一个官方 DeepSeek 模型，
+输入框下方就会出现 `DS 余额 … ｜ 轮 … ｜ 日 …`。
+
+> npm 上另有一个同名包 `dsh-deepseek-cost`（作者 miaoxintechnology），与本项目无关。
+> 本项目只发布在带 scope 的 `@skyrocks/dsh-deepseek-cost` 下，请认准作者 `skyrocks`。
+
+### 命令行（可选）
+
+```sh
+dsh plugin --profile desktop add @skyrocks/dsh-deepseek-cost
+# 或者跟随 GitHub：dsh plugin --profile desktop add github:skyrocks/dsh-deepseek-cost
+```
+
+`desktop` 是桌面版 profile；`dsh web` 换成 `--profile web`。装完同样要完全退出并重启。
 
 ### 本地开发（link 方式）
 
@@ -81,12 +100,12 @@ DS  -¥0.49 │ 轮 ¥0.02 │ 日 ¥0 │ 周 ¥0 │ 月 ¥18.77 │ 总 ¥129
 
 ```jsonc
 {
-  "dsh": { "profile": { "bundles": ["@deepseek-ai/dsh-base", "@deepseek-ai/dsh-web-app", "dsh-deepseek-cost"] } },
-  "dependencies": { "dsh-deepseek-cost": "link:/Users/you/dsh-deepseek-cost" }
+  "dsh": { "profile": { "bundles": ["@deepseek-ai/dsh-base", "@deepseek-ai/dsh-web-app", "@skyrocks/dsh-deepseek-cost"] } },
+  "dependencies": { "@skyrocks/dsh-deepseek-cost": "link:/Users/you/dsh-deepseek-cost" }
 }
 ```
 
-并让 `node_modules/dsh-deepseek-cost` 指向该目录（`pnpm install` 或手工软链）。
+并让 `node_modules/@skyrocks/dsh-deepseek-cost` 指向该目录（`pnpm install` 或手工软链）。
 插件行由 `cordis.patch.yml` 自动插入，id 为 `deepseek-cost`。
 
 ## 配置

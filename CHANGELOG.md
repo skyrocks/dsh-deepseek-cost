@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.1
+
+- npm 包名改为 `@skyrocks/dsh-deepseek-cost`：npm 上已有同名包（作者 miaoxintechnology），
+  本项目改用带 scope 的名字，避免装错。
+- README 增加 npm / GitHub 两种安装来源与作者提示；补 npm、license、DSH 版本徽章。
+- `author` 改为 `skyrocks`，补 `publishConfig.access: public`。
+
 ## 0.2.0
 
 - **余额、累计、本月、本周、今日全部改为直接读官网账号接口**，不再本地估算：
