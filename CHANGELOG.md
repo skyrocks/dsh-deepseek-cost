@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.2
+
+- `cordis.patch.yml` 的插件行名改为包名 `@skyrocks/dsh-deepseek-cost`：包名带 scope 后，
+  行名必须与安装后的模块名一致，否则 Host 启动时找不到插件。
+- 安装说明改为 GitHub 唯一来源（`github:skyrocks/dsh-deepseek-cost`），暂时不走 npm。
+- 去掉未发布的 npm 徽章。
+
 ## 0.2.1
 
 - npm 包名改为 `@skyrocks/dsh-deepseek-cost`：npm 上已有同名包（作者 miaoxintechnology），

@@ -8,4 +8,4 @@
 #         deepseek-flash: { input: 2, cacheRead: 0.04, output: 8 }
 - insert:
     - id: deepseek-cost
-      name: dsh-deepseek-cost
+      name: "@skyrocks/dsh-deepseek-cost"

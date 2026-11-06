@@ -1,6 +1,5 @@
 # dsh-deepseek-cost
 
-[![npm](https://img.shields.io/npm/v/@skyrocks/dsh-deepseek-cost?label=npm)](https://www.npmjs.com/package/@skyrocks/dsh-deepseek-cost)
 ![license](https://img.shields.io/badge/license-MIT-blue.svg)
 ![dsh](https://img.shields.io/badge/DSH-0.2.1--rc.2%20line-4d6bfe)
 
@@ -72,24 +71,22 @@ DS  -¥0.49 │ 轮 ¥0.02 │ 日 ¥0 │ 周 ¥0 │ 月 ¥18.77 │ 总 ¥129
 
 ### 桌面端（推荐）
 
-设置 →「插件」→「添加插件」，粘贴下面任意一种来源：
+设置 →「插件」→「添加插件」，粘贴：
 
 ```
-@skyrocks/dsh-deepseek-cost          # npm 包
-github:skyrocks/dsh-deepseek-cost    # GitHub 默认分支
+github:skyrocks/dsh-deepseek-cost
 ```
 
 然后 **完全退出 DSH 再打开**（Host 插件只在启动时加载），选一个官方 DeepSeek 模型，
 输入框下方就会出现 `DS 余额 … ｜ 轮 … ｜ 日 …`。
 
-> npm 上另有一个同名包 `dsh-deepseek-cost`（作者 miaoxintechnology），与本项目无关。
-> 本项目只发布在带 scope 的 `@skyrocks/dsh-deepseek-cost` 下，请认准作者 `skyrocks`。
+> 包名是 `@skyrocks/dsh-deepseek-cost`。npm 上另有一个同名包 `dsh-deepseek-cost`
+> （作者 miaoxintechnology），与本项目无关；当前只通过 GitHub 分发。
 
 ### 命令行（可选）
 
 ```sh
-dsh plugin --profile desktop add @skyrocks/dsh-deepseek-cost
-# 或者跟随 GitHub：dsh plugin --profile desktop add github:skyrocks/dsh-deepseek-cost
+dsh plugin --profile desktop add github:skyrocks/dsh-deepseek-cost
 ```
 
 `desktop` 是桌面版 profile；`dsh web` 换成 `--profile web`。装完同样要完全退出并重启。

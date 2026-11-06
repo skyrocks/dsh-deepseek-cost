@@ -1,6 +1,5 @@
 # dsh-deepseek-cost
 
-[![npm](https://img.shields.io/npm/v/@skyrocks/dsh-deepseek-cost?label=npm)](https://www.npmjs.com/package/@skyrocks/dsh-deepseek-cost)
 ![license](https://img.shields.io/badge/license-MIT-blue.svg)
 ![dsh](https://img.shields.io/badge/DSH-0.2.1--rc.2%20line-4d6bfe)
 
@@ -64,25 +63,23 @@ detected locally and are billed as peak).
 
 ### Desktop app (recommended)
 
-Settings → Plugins → Add plugin, then paste either source:
+Settings → Plugins → Add plugin, then paste:
 
 ```
-@skyrocks/dsh-deepseek-cost          # npm package
-github:skyrocks/dsh-deepseek-cost    # GitHub default branch
+github:skyrocks/dsh-deepseek-cost
 ```
 
 Then **quit DSH completely and reopen it** (host plugins load at startup) and pick an
 official DeepSeek model; the dock appears under the composer.
 
-> A different, unrelated package named `dsh-deepseek-cost` also exists on npm
-> (published by miaoxintechnology). This project is published only as the scoped
-> `@skyrocks/dsh-deepseek-cost` — check the author `skyrocks`.
+> The package name is `@skyrocks/dsh-deepseek-cost`. A different, unrelated package
+> named `dsh-deepseek-cost` exists on npm (published by miaoxintechnology); this
+> project is currently distributed through GitHub only.
 
 ### CLI (optional)
 
 ```sh
-dsh plugin --profile desktop add @skyrocks/dsh-deepseek-cost
-# or from GitHub: dsh plugin --profile desktop add github:skyrocks/dsh-deepseek-cost
+dsh plugin --profile desktop add github:skyrocks/dsh-deepseek-cost
 ```
 
 Use `--profile web` for a `dsh web` profile. Fully quit and relaunch DSH afterwards.
