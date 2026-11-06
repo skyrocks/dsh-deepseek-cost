@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.3
+
+- 修复 scoped 安装（`@skyrocks/dsh-deepseek-cost`）时客户端模块无法注册的问题：
+  `__ModuleLoader__.load` 的 id、typert 清单的 package / invocation id / typeSymbol
+  现在与 `package.json` 的包名一致。
+- 增加回归测试：模块 id 与包名必须一致。
+
 ## 0.2.2
 
 - `cordis.patch.yml` 的插件行名改为包名 `@skyrocks/dsh-deepseek-cost`：包名带 scope 后，

@@ -1,7 +1,7 @@
 // Client 半：输入框下方常驻显示 DeepSeek 余额与本轮/今日/本周/本月/累计金额。
 // 手写 lazy-CJS bundle：脚本执行时只注册 factory，模块体在 materialize 时才运行。
 window.__ModuleLoader__.load({
-  id: "dsh-deepseek-cost",
+  id: "@skyrocks/dsh-deepseek-cost",
   factory: (require) => {
     var module = { exports: {} };
     var exports = module.exports;
@@ -15,10 +15,10 @@ window.__ModuleLoader__.load({
     // 客户端只声明调用形状；结果校验在 Host 侧完成，这里直通即可。
     const passThrough = () => ({ parse: (value) => value });
     const REMOTE = {
-      package: "dsh-deepseek-cost",
+      package: "@skyrocks/dsh-deepseek-cost",
       descriptors: [
         {
-          id: "dsh-deepseek-cost#deepseekCost/read",
+          id: "@skyrocks/dsh-deepseek-cost#deepseekCost/read",
           service: "deepseekCost",
           namespace: "deepseekCost",
           method: "read",
@@ -26,12 +26,12 @@ window.__ModuleLoader__.load({
           parameters: [],
           result: {
             mode: "strict",
-            typeSymbol: "dsh-deepseek-cost#DeepSeekCostResult",
+            typeSymbol: "@skyrocks/dsh-deepseek-cost#DeepSeekCostResult",
             create: passThrough,
           },
         },
         {
-          id: "dsh-deepseek-cost#deepseekCost/refresh",
+          id: "@skyrocks/dsh-deepseek-cost#deepseekCost/refresh",
           service: "deepseekCost",
           namespace: "deepseekCost",
           method: "refresh",
@@ -39,7 +39,7 @@ window.__ModuleLoader__.load({
           parameters: [],
           result: {
             mode: "strict",
-            typeSymbol: "dsh-deepseek-cost#DeepSeekCostResult",
+            typeSymbol: "@skyrocks/dsh-deepseek-cost#DeepSeekCostResult",
             create: passThrough,
           },
         },

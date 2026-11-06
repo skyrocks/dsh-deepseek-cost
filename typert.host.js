@@ -55,12 +55,12 @@ function parseResult(value) {
 
 const resultCodec = {
   mode: "strict",
-  typeSymbol: "dsh-deepseek-cost#DeepSeekCostResult",
+  typeSymbol: "@skyrocks/dsh-deepseek-cost#DeepSeekCostResult",
   create: () => ({ parse: parseResult }),
 };
 
 const invocation = (method) => ({
-  id: `dsh-deepseek-cost#deepseekCost/${method}`,
+  id: `@skyrocks/dsh-deepseek-cost#deepseekCost/${method}`,
   service: "deepseekCost",
   namespace: "deepseekCost",
   method,
@@ -70,7 +70,7 @@ const invocation = (method) => ({
 });
 
 export const TYPERT = {
-  package: "dsh-deepseek-cost",
+  package: "@skyrocks/dsh-deepseek-cost",
   face: "host",
   schemas: [],
   invocations: [invocation("read"), invocation("refresh")],

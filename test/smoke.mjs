@@ -323,6 +323,17 @@ test("Typert codec 可脱离 zod 加载并校验结果", () => {
   assert.throws(() => parser.parse({ ...value, day: { ...bucket, cost: Infinity } }));
 });
 
+test("模块 id / typert 包名与 package.json 一致（scoped 安装的关键）", () => {
+  const pkg = JSON.parse(readFileSync(new URL("../package.json", import.meta.url), "utf8"));
+  const client = readFileSync(new URL("../client.js", import.meta.url), "utf8");
+  const typert = readFileSync(new URL("../typert.host.js", import.meta.url), "utf8");
+  assert.match(client, new RegExp(`id: "${pkg.name.replace(/[/@]/g, "\\$&")}"`));
+  assert.ok(client.includes(`package: "${pkg.name}"`));
+  assert.ok(typert.includes(`package: "${pkg.name}"`));
+  assert.ok(client.includes(`typeSymbol: "${pkg.name}#DeepSeekCostResult"`));
+  assert.ok(typert.includes(`id: \`${pkg.name}#deepseekCost/`));
+});
+
 test("客户端：官方路由才显示，金额支持负数", () => {
   const client = readFileSync(new URL("../client.js", import.meta.url), "utf8");
   assert.match(client, /conversation\.composer\.dock/);

@@ -1,6 +1,6 @@
 {
   "name": "@skyrocks/dsh-deepseek-cost",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "DeepSeek Harness plugin: 输入框下方常驻显示官网账号余额，以及本轮 / 今日 / 本周 / 本月 / 累计花费",
   "license": "MIT",
   "type": "module",
