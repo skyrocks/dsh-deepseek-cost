@@ -2,6 +2,7 @@
 
 ![license](https://img.shields.io/badge/license-MIT-blue.svg)
 ![dsh](https://img.shields.io/badge/DSH-0.2.1--rc.2%20line-4d6bfe)
+[![CI](https://github.com/skyrocks/dsh-deepseek-cost/actions/workflows/ci.yml/badge.svg)](https://github.com/skyrocks/dsh-deepseek-cost/actions/workflows/ci.yml)
 
 [简体中文](README.md) | English
 

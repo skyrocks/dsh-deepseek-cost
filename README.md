@@ -2,6 +2,7 @@
 
 ![license](https://img.shields.io/badge/license-MIT-blue.svg)
 ![dsh](https://img.shields.io/badge/DSH-0.2.1--rc.2%20line-4d6bfe)
+[![CI](https://github.com/skyrocks/dsh-deepseek-cost/actions/workflows/ci.yml/badge.svg)](https://github.com/skyrocks/dsh-deepseek-cost/actions/workflows/ci.yml)
 
 在 **DeepSeek Harness** 的对话输入框下方，常驻显示 **DeepSeek 账号余额** 与
 **本轮 / 今日 / 本周 / 本月 / 累计** 花费，悬浮看明细，点击立即刷新。
