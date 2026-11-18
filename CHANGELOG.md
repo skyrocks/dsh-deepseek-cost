@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.5
+
+- 补上插件图标与本地化名称：新增 `icon.svg`（`exports["./icon"]`）和 `locale/{zh,en}.json`
+  （`meta.title` / `meta.description`）。此前设置页的插件列表只能回退成包名、也没有图标。
+- 安装包不再包含 `test/`：运行时本来就不碰文件系统，但自动化商店的源码扫描会把包内测试里的
+  `node:fs` 判成「插件会读写本机文件」的权限信号。仓库内的测试与 CI 不受影响。
+
 ## 0.2.4
 
 - 安装包里不再包含 `test/`：`package.json` 的 `files` 去掉 `test`。运行时本来就不碰文件系统，

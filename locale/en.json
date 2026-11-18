@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "DeepSeek balance & spend",
+    "description": "Docks the DeepSeek account balance under the composer plus current-turn, day, week, month and lifetime spend; hover for details, click to refresh."
+  }
+}
