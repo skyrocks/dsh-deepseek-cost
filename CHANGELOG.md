@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.4
+
+- 安装包里不再包含 `test/`：`package.json` 的 `files` 去掉 `test`。运行时本来就不碰文件系统，
+  但自动化商店的源码扫描会把包内测试里的 `node:fs` 判成「插件会读写本机文件」的权限信号，
+  属于误报；不打包测试后该信号消失。仓库内的 `test/` 与 CI 不受影响。
+
 ## 0.2.3
 
 - 修复 scoped 安装（`@skyrocks/dsh-deepseek-cost`）时客户端模块无法注册的问题：
